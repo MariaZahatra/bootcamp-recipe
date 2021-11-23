@@ -26,8 +26,8 @@ app.listen(port,function(){
 const ourData={results: [] }
 
 
-urllib.request('https://recipes-goodness.herokuapp.com/recipes/YOUR_INGREDIENT.json', function (err, data, res) {
-    ourData.results = JSON.parse(data).results.RECIPES
+urllib.request('https://recipes-goodness.herokuapp.com/recipes/YOUR_INGREDIENT', function (err, data, res) {
+    ourData.results = JSON.parse(data).results.YOUR_INGREDIENT
     if (err) {
         throw err; 
       }
@@ -39,7 +39,7 @@ urllib.request('https://recipes-goodness.herokuapp.com/recipes/YOUR_INGREDIENT.j
 
 
 app.get('/recipes/:ingredient',function(request,response){
-    let ingredientId = ingredients[request.params.ingredient]
+    let ingredientId = YOUR_INGREDIENT[request.params.ingredient]
    
     let recipeIngredients = ourData.results.filter(r => r.ingredientId===ingredientId)
     .map(p =>  {return{"Recipe" : r.recipe,
@@ -50,6 +50,8 @@ app.get('/recipes/:ingredient',function(request,response){
    
         response.send(data[recipeIngredients ])
 })
+
+
 
 
 

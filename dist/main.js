@@ -1,5 +1,3 @@
-
-
 const source = $("#ingredient-template").html();
 const template = Handlebars.compile(source);
 
@@ -23,6 +21,9 @@ const renderingredient = function(ingredient){
     $(".ingredient").append(newHTML);
 }
 
-const title = document.getElementsByClassName("content-title")
-title.innerHTML= "Recipes"
+
+const title = document.getElementsByClassName("head")
+const enterTitle = function (){
+    title.innerHTML= "Recipes"
+}
 

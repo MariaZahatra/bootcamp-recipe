@@ -53,20 +53,4 @@ app.get('/recipes/:ingredient',function(request,response){
 
 
 
-//https://api-nba-v1.p.rapidapi.com/teams/shortName/%7Bshortname%7D
-
-// const data = {
-//     8112: {
-//         title: "Name of the Wind",
-//         author: "Patrick Rothfuss"
-//     },
-//     9121: {
-//         title: "The Catcher in the Rye",
-//         author: "J.D. Salinger"
-//     },
-//     1081: {
-//         title: "The Giver",
-//         author: "Lois Lowry"
-//     }
-// }
 
